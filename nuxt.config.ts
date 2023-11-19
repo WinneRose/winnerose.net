@@ -43,5 +43,5 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
- 
+
 });

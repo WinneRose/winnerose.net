@@ -8,8 +8,8 @@
         <NuxtImg
           :src="
             $colorMode.value === 'dark' || $colorMode.value === 'sepia'
-              ? 'logo.png'
-              : 'logo-light.png'
+              ? '/logo.png'
+              : '/logo-light.png'
           "
           class="custom-logo-class"
         />
