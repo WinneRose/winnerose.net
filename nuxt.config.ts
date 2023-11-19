@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  
   devtools: {
     enabled: true,
 
@@ -18,6 +19,7 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: true,
   },
+  
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
@@ -34,14 +36,11 @@ export default defineNuxtConfig({
     ],
   ],
   css: ["@/assets/css/main.css"],
-  image: {
-    dir: "assets/images",
-  },
+
   components: [
     {
       path: "~/components",
       pathPrefix: false,
     },
   ],
-
 });

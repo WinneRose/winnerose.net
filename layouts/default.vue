@@ -1,3 +1,6 @@
+<script setup>
+const modes = ["system", "light", "dark", "sepia"];
+</script>
 
 <template>
   <nav>
@@ -8,8 +11,8 @@
         <NuxtImg
           :src="
             $colorMode.value === 'dark' || $colorMode.value === 'sepia'
-              ? '/logo.png'
-              : '/logo-light.png'
+              ? '/images/logo-dark.png'
+              : '/images/logo-light.png'
           "
           class="custom-logo-class"
         />
@@ -58,9 +61,7 @@
   </nav>
 </template>
 
-<script setup>
-const modes = ["system", "light", "dark", "sepia"];
-</script>
+
 
 <style scoped>
 .custom-logo-class {

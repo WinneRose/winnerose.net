@@ -1,4 +1,5 @@
-
+<script setup>
+</script>
 
 <template>
   <div
@@ -13,7 +14,7 @@
         </p>
       </div>
     </div>
-    <NuxtImg src="/avatar.png" class="h-24 md:h-36" />
+    <NuxtImg src="/images/avatar.png" class="h-24 md:h-36" />
   </div>
 </template>
 
