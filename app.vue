@@ -1,20 +1,18 @@
 
 <template>
   <div
-    class="p-10 dark:bg-dark-secondary min-h-screen container"
-    :class="$colorMode.value == 'sepia' ? 'bg-gray-400' : 'bg-white' "
+    class="px-8 dark:bg-dark-secondary min-h-screen w-full"
+    :class="$colorMode.value == 'sepia' ? 'bg-gray-400' : 'bg-white'"
   >
-    <NuxtLayout />
+    <NuxtLayout/>
     <NuxtPage />
   </div>
 </template>
 
 <script setup>
-const appConfig = useAppConfig();
 const colorMode = useColorMode();
+const appConfig = useAppConfig();
+colorMode.value = appConfig["default-mode"];
 
-
-
-console.log(appConfig["default-mode"]);
 </script>
 

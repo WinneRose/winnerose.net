@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  
   devtools: {
     enabled: true,
 
@@ -19,18 +18,19 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: true,
   },
-  
+
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxt/image",
+    "@nuxt/content",
     [
       "@nuxtjs/google-fonts",
       {
         families: {
           Roboto: true,
-          Poppins: [400, 700],
+          Poppins: true,
         },
       },
     ],

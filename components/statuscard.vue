@@ -12,7 +12,7 @@ import { NuxtImg } from '../.nuxt/components';
         </div>
 
         <div
-          v-if="activityname == 'Code'"
+          v-if="activityname == 'Code' || playingspotify == true"
           class="py-6 lg:px-16 lg:py-36 justify-center text-center flex flex-col rounded-2xl text-dark-main dark:text-light-main font-bold bg-gray-200 dark:bg-dark-main items-center w-full"
         >
           <h1 class="text-lg">Visual Studio Code</h1>
@@ -23,7 +23,11 @@ import { NuxtImg } from '../.nuxt/components';
         v-if="spotifybg"
         class="px-4 lg:px-16 py-4 flex flex-row space-x-10 rounded-2xl text-dark-main dark:text-light-main font-bold bg-gray-200 dark:bg-dark-main justify-center items-center w-full"
       >
-        <NuxtImg :src="spotifybg" class="h-24 lg:h-36 xl:h-64 rounded-xl" />
+        <NuxtImg
+          :src="spotifybg"
+          class="h-24 lg:h-36 xl:h-64 rounded-xl"
+          alt="Spotify Album İmage"
+        />
         <div class="flex flex-col text-lg space-y-2">
           <h1 class="text-lg lg:text-3xl">Listening Spotify</h1>
           <div class="text-dark-main dark:text-light-main font-semibold">
@@ -80,7 +84,19 @@ export default {
       }
 
       // Check if custom activity data is available
-      if (data.data.activities && data.data.activities.length > 1) {
+      if (
+        data.data.activities &&
+        data.data.activities.length > 1 &&
+        this.playingspotify == true
+      ) {
+        this.activityname = data.data.activities[2].name;
+        this.activityimg = data.data.activities[2].name;
+        this.activitydetails = data.data.activities[2].state;
+      } else if (
+        data.data.activities &&
+        data.data.activities.length > 1 &&
+        this.playingspotify == false
+      ) {
         this.activityname = data.data.activities[1].name;
         this.activityimg = data.data.activities[1].name;
         this.activitydetails = data.data.activities[1].state;

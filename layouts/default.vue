@@ -14,7 +14,7 @@ const modes = ["system", "light", "dark", "sepia"];
               ? '/images/logo-dark.png'
               : '/images/logo-light.png'
           "
-          class="custom-logo-class"
+          alt="Logo"
         />
       </a>
 
@@ -22,14 +22,14 @@ const modes = ["system", "light", "dark", "sepia"];
         <ul class="font-poppins font-normal space-y-4">
           <li class="block md:inline-block">
             <a
-              href="#"
+              href="/"
               class="py-2 px-3 text-dark-main dark:text-white rounded-xl hover:bg-gray-300 dark:hover:bg-dark-main"
               >home</a
             >
           </li>
           <li class="block md:inline-block">
             <a
-              href="#"
+              href="/aboutme"
               class="py-2 px-3 text-dark-main dark:text-white rounded-xl hover:bg-gray-300 dark:hover:bg-dark-main"
               >about me</a
             >
@@ -63,9 +63,3 @@ const modes = ["system", "light", "dark", "sepia"];
 
 
 
-<style scoped>
-.custom-logo-class {
-  width: auto; /* or set a fixed width */
-  max-height: 100%; /* or adjust as needed */
-}
-</style>
