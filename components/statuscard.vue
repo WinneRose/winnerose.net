@@ -12,7 +12,7 @@ import { NuxtImg } from '../.nuxt/components';
         </div>
 
         <div
-          v-if="activityname == 'Code' || playingspotify == true"
+          v-if="activityname == 'Code'"
           class="py-6 lg:px-16 lg:py-36 justify-center text-center flex flex-col rounded-2xl text-dark-main dark:text-light-main font-bold bg-gray-200 dark:bg-dark-main items-center w-full"
         >
           <h1 class="text-lg">Visual Studio Code</h1>
