@@ -3,6 +3,7 @@
   --bg: #f3f5f4;
   --bg-secondary: #fff;
   --border-color: #ddd;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,3 +28,5 @@ p {
   -ms-user-select: none;
   user-select: none;
 }
+
+

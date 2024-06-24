@@ -22,9 +22,9 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode",
     "@nuxt/image",
     "@nuxt/content",
+    "nuxt-icon",
     [
       "@nuxtjs/google-fonts",
       {
@@ -32,6 +32,13 @@ export default defineNuxtConfig({
           Roboto: true,
           Poppins: true,
         },
+      },
+    ],
+
+    [
+      "@nuxtjs/color-mode",
+      {
+        preference: "dark",
       },
     ],
   ],
@@ -43,4 +50,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+
+  plugins: ["~/plugins/spotify.js"],
 });
