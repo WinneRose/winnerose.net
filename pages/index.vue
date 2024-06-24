@@ -13,8 +13,8 @@
 <script>
 import ProfileCard from '~/components/cards/profilecard.vue';
 import Statuscard from '~/components/cards/statuscard.vue';
-import Aboutme from '~/components/cards/aboutme.vue';
-import Projects from '~/components/cards/projects.vue';
+import Aboutme from '~/components/aboutme.vue';
+import Projects from '~/components/projects.vue';
 
 export default {
   components: {
