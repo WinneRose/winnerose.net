@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import ProfileCard from '~/components/ProfileCard.vue';
-import Statuscard from '~/components/StatusCard.vue';
-import Aboutme from '~/components/AboutMe.vue';
-import Projects from '~/components/Projects.vue';
+import ProfileCard from '~/components/cards/profilecard.vue';
+import Statuscard from '~/components/cards/statuscard.vue';
+import Aboutme from '~/components/cards/aboutme.vue';
+import Projects from '~/components/cards/projects.vue';
 
 export default {
   components: {
@@ -23,6 +23,5 @@ export default {
     Aboutme,
     Projects
   },
-  // Your data, methods, computed properties, etc.
 }
 </script>
