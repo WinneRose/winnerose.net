@@ -9,7 +9,7 @@
    
     <div v-if="loading">Loading...</div>
     <div v-else>
-      <div class="grid grid-cols-3 gap-10">
+      <div class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-8 ">
         <RepositoryCard v-for="repo in paginatedRepos" :key="repo.id" :repository="repo" class="transition-transform duration-500 transform  hover:scale-110"/>
       </div>
      
