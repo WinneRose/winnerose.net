@@ -23,5 +23,6 @@ export default {
     Aboutme,
     Projects
   },
+  // Your data, methods, computed properties, etc.
 }
 </script>
