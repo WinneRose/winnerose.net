@@ -28,7 +28,7 @@
         so that I can add a new perspective to myself.
       </p>
     </div>
-
+ <Socialmedia />
   <div v-if="discordstatus" class="flex flex-col space-y-4">
     <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
       <div class="flex flex-col space-y-4 w-full">
@@ -48,7 +48,7 @@
           <h1>{{ activitydetails }}</h1>
         </div>
 
-        <Socialmedia />
+       
       </div>
 
        <div
