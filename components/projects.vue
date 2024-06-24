@@ -19,7 +19,7 @@
 
 <script>
 import axios from 'axios';
-import RepositoryCard from '~/components/RepositoryCard.vue';
+import RepositoryCard from '~/components/cards/repositorycard.vue';
 import Pagination from '~/components/pagination.vue';
 
 const USER_PER_PAGE = 6; // Define your USER_PER_PAGE constant here
