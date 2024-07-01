@@ -1,6 +1,7 @@
 <template>
   <nav>
     <div>
+      <SpeedInsights />
       <div class="grid grid-cols-3 w-[100vw] justify-between  py-4  md:flex md:w-auto ">
         <div class="visible md:hidden" >
           <button
@@ -73,6 +74,7 @@
 </template>
 
 <script setup>
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 import { ref } from 'vue';
 
 const modes = ["light", "dark", "sepia"];
