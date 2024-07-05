@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div>
-      <SpeedInsights />
+    
       <div class="grid grid-cols-3 w-[100vw] justify-between  py-4  md:flex md:w-auto ">
         <div class="visible md:hidden" >
           <button
@@ -70,7 +70,9 @@
         </ul>
       </div>
     </div>
+      
   </nav>
+  <SpeedInsights />
 </template>
 
 <script setup>
