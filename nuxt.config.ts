@@ -79,7 +79,6 @@ export default defineNuxtConfig({
     name: "WinneRose",
     description:
       "Welcome to my portfolio! Check out my projects and learn more about me.",
-    indexable: false,
   },
 
   plugins: ["~/plugins/spotify.js"],
