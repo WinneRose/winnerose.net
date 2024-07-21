@@ -2,10 +2,10 @@
   <nav>
     <div>
     
-      <div class="grid grid-cols-3 w-[100vw] justify-between  py-4  md:flex md:w-auto ">
+      <div class="flex   justify-between  py-4  md:flex md:w-auto ">
         <div class="visible md:hidden" >
           <button
-            class="md:hidden p-2  text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none rounded-lg"
+            class="md:hidden p-2  text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none rounded-lg "
             @click="toggleMobileMenu"
           >
             <svg
@@ -20,53 +20,52 @@
           </button>
         </div>
         
-        <div class="justify-self-center content-center">
-          <a href="/" >
-            <NuxtImg
-              :src="
-                $colorMode.value === 'dark' || $colorMode.value === 'sepia'
-                  ? '/images/logo-dark.png'
-                  : '/images/logo-light.png'
-              "
-              alt="Logo"
-              width="50px"
-              height="auto"
-            />
-          </a>
-        </div>
-
-        <div class="hidden md:flex items-center space-x-4">
+          <div class="hidden md:flex items-center space-x-4">
           <ul class="flex space-x-4">
-            <li><a href="/" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Home</a></li>
-            <li><a href="#aboutme" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About Me</a></li>
-            <li><a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Projects</a></li>
+            <li><a href="/" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:animate-pulse">Home</a></li>
+            <li><a href="#aboutme" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:animate-pulse">About Me</a></li>
+            <li><a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:animate-pulse">Projects</a></li>
            
           </ul>
 
-          <div>
-            <USelectMenu
-              v-model="$colorMode.preference"
-              :options="modes"
-              class="py-2 px-3 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none"
-              placeholder="Select Color Mode"
-            />
-          </div>
+         
         </div>
+        <div class="justify-self-center content-center">
+         
+   <button
+    @click="toggleDarkMode($colorMode.preference === 'dark' ? 'light' : 'dark')"
+    class="relative px-4 py-1 rounded-xl bg-gray-200 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300 "
+  >
+    <span
+      class="  flex items-center justify-center transform transition-transform duration-500 ease-in-out"
+     
+    >
+      <Icon
+        v-if="$colorMode.preference === 'dark'"
+        name="solar:sun-bold-duotone"
+        size="20px"
+        class="text-white"
+      />
+      <Icon
+        v-else
+        name="solar:moon-bold-duotone"
+        size="20px"
+        class="text-gray-800"
+      />
+    </span>
+  </button>
+ 
+        </div>
+
+      
       </div>
 
       <div :class="['md:hidden', isMobileMenuOpen ? 'block' : 'hidden']">
         <ul class="py-2 space-y-2">
-          <li><a href="/" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Home</a></li>
-          <li><a href="#aboutme" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">About Me</a></li>
-          <li><a href="#projects" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Projects</a></li>
-          <li>
-            <USelectMenu
-              v-model="$colorMode.preference"
-              :options="modes"
-              class="py-2 px-4 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none w-56"
-              placeholder="Select Color Mode"
-            />
-          </li>
+          <li><a href="/" class="block py-2 px-4 text-gray-700 dark:text-gray-300   hover:bg-gray-200 dark:hover:bg-gray-700  hover:animate-pulse">Home</a></li>
+          <li><a href="#aboutme" class="block py-2 px-4 text-gray-700 dark:text-gray-300  hover:bg-gray-200 dark:hover:bg-gray-700 hover:animate-pulse">About Me</a></li>
+          <li><a href="#projects" class="block py-2 px-4 text-gray-700 dark:text-gray-300  hover:bg-gray-200 dark:hover:bg-gray-700 hover:animate-pulse">Projects</a></li>
+         
         </ul>
       </div>
     </div>
@@ -79,14 +78,13 @@
 import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 import { ref } from 'vue';
 
-const modes = ["light", "dark", "sepia"];
 const isMobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
-</script>
 
-<style scoped>
-/* Add scoped styles here if needed */
-</style>
+function toggleDarkMode(theme) {
+  useColorMode().preference = theme
+}
+</script>

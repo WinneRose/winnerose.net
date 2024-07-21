@@ -1,6 +1,6 @@
 
 <template>
-<div class="flex flex-col space-y-4 pb-12">
+<div class="flex flex-col space-y-4 pb-12 animate-fade-in">
   
   <ProfileCard />
   <Statuscard />
@@ -26,3 +26,19 @@ export default {
   // Your data, methods, computed properties, etc.
 }
 </script>
+
+<style>
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}</style>

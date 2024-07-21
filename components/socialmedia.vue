@@ -2,19 +2,19 @@
   <ContentQuery path="socialmedia">
     <template #default="{ data }">
       <div class="w-full">
-        <ul class="space-x-4 flex justify-center w-full">
-          <li
-            v-for="social in data"
-            :key="social.id"
-            class="text-dark-main dark:text-light-main font-bold bg-gray-200 dark:bg-dark-main p-3 rounded-lg flex-1 shadow-md"
-          >
-            <div class="flex justify-center">
-              <a :href="social.url" class="flex space-x-2">
-                <Icon :name="social.icon" :size="iconSize" />
-              </a>
-            </div>
-          </li>
-        </ul>
+         <ul class="space-x-4 flex justify-center w-full">
+    <li
+      v-for="social in data"
+      :key="social.id"
+      class="text-dark-main dark:text-light-main font-bold bg-gray-200 dark:bg-dark-main p-3 rounded-lg flex-1 shadow-md "
+    >
+      <div class="flex justify-center focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300">
+        <a :href="social.url" class="flex space-x-2 icon-hover-animation">
+          <Icon :name="social.icon" :size="iconSize" />
+        </a>
+      </div>
+    </li>
+  </ul>
       </div>
     </template>
     <template #not-found>
@@ -46,3 +46,11 @@ export default {
   },
 };
 </script>
+<style>
+
+
+
+.icon-hover-animation:hover {
+  transform: scale(1.1);
+}
+</style>

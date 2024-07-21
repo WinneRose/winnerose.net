@@ -62,20 +62,19 @@
         alt="Spotify Album Image"
       />
     </div>
-    <div class="flex flex-col justify-center items-center w-2/3 lg:w-3/4">
-      <h1 class="text-2xl lg:text-4xl text-white drop-shadow-lg mb-4">Listening to Spotify</h1>
-      <div class="font-semibold space-y-1 text-center">
-        <p class="text-white text-xl lg:text-2xl">
+    <div class="flex flex-col justify-center items-center w-2/3 lg:w-3/4  ">
+      <h1 class="text-lg md:text-2xl text-white drop-shadow-lg md:mb-4">Listening to Spotify</h1>
+      <div class="font-semibold md:space-y-1 text-center">
+        <p class="text-white text-base md:text-xl">
           {{ songname }}
         </p>
-        <p class="text-gray-200 text-lg lg:text-xl">
+        <p class="text-gray-200 text-base lg:text-lg">
           {{ artistname }}
         </p>
+        
       </div>
     </div>
-    <div class="absolute bottom-2 right-2 text-sm text-gray-300 dark:text-gray-500">
-      Powered by Spotify & Lanyard
-    </div>
+   
   </div>
     </div>
   </div>
@@ -117,36 +116,40 @@ export default {
     clearInterval(this.interval);
   },
   methods: {
-    async fetchDiscordData() {
-      const url = "https://api.lanyard.rest/v1/users/701896585604497490";
-      const options = {};
+  async fetchDiscordData() {
+  const url = "https://api.lanyard.rest/v1/users/701896585604497490";
+  const options = {};
 
-      try {
-        const discord_data = await this.useFetch(url, options);
+  try {
+    const discord_data = await this.useFetch(url, options);
 
-        this.playingspotify = discord_data.data.listening_to_spotify;
-        this.discordstatus = discord_data.data.discord_status;
+    this.playingspotify = discord_data.data.listening_to_spotify;
+    this.discordstatus = discord_data.data.discord_status;
 
-        if (this.playingspotify) {
-          this.spotifybg = discord_data.data.spotify.album_art_url;
-          this.songname = discord_data.data.spotify.song;
-          this.artistname = discord_data.data.spotify.artist;
-        }
+    if (this.playingspotify) {
+      this.spotifybg = discord_data.data.spotify.album_art_url;
+      this.songname = discord_data.data.spotify.song;
+      this.artistname = discord_data.data.spotify.artist;
+    }
 
-        let isCoding = discord_data.data.activities.some(
-          (coding) => coding.application_id === "782685898163617802"
-        );
-        if (isCoding) {
-          const code_activity = discord_data.data.activities.find(
-            (activity) => activity.id === "a8bf9e64e3af4b15"
-          );
-          this.activityname = code_activity.name;
-          this.activitydetails = code_activity.state;
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    },
+    let isCoding = discord_data.data.activities.some(
+      (coding) => coding.application_id === "782685898163617802"
+    );
+    if (isCoding) {
+      const code_activity = discord_data.data.activities.find(
+        (activity) => activity.application_id === "782685898163617802"
+      );
+      
+     
+        this.activityname = code_activity.name;
+        this.activitydetails = code_activity.state;
+     
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+},
+
     async useFetch(url, options) {
       try {
         const response = await fetch(url, options);

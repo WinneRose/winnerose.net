@@ -2,16 +2,9 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "WinneRose",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Welcome to my portfolio! Check out my projects and learn more about me.",
-        },
         {
           name: "keywords",
           content:
@@ -30,9 +23,7 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  colorMode: {
-    classSuffix: "",
-  },
+
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config.js",
@@ -63,14 +54,17 @@ export default defineNuxtConfig({
         },
       },
     ],
-
     [
       "@nuxtjs/color-mode",
       {
-        preference: "dark",
+        preference: "system", // default value of $colorMode.preference
+        fallback: "light", // fallback value if not system preference found
       },
     ],
+    "@nuxtjs/robots",
+    "@nuxtjs/seo",
   ],
+
   css: ["@/assets/css/main.css"],
 
   components: [
@@ -80,5 +74,14 @@ export default defineNuxtConfig({
     },
   ],
 
+  site: {
+    url: "winnerose.net",
+    name: "WinneRose",
+    description:
+      "Welcome to my portfolio! Check out my projects and learn more about me.",
+    indexable: false,
+  },
+
   plugins: ["~/plugins/spotify.js"],
+  compatibilityDate: "2024-07-21",
 });
