@@ -4,18 +4,18 @@
 
     <div class="flex flex-col md:flex-row w-full space-x-0 md:space-x-4 space-y-6 md:space-y-0 font-mono">
       
-      <div class="stats-container flex flex-col bg-gray-200 shadow rounded-lg p-6 md:w-1/3 justify-center">
-         <h1 class="text-xl md:text-2xl font-bold text-gray-800 mb-6">{{ username }}'s Contribution Graph</h1>
-        <div class="stat-item flex justify-between mb-6">
-          <div class="stat-title text-gray-600">Total Stars</div>
-          <div class="stat-value text-lg font-semibold text-gray-800">{{ totalStars }}</div>
+      <div class="stats-container flex flex-col dark:bg-dark-main bg-gray-200 shadow rounded-lg p-6 md:w-1/3 justify-center">
+         <h1 class="text-xl md:text-2xl font-bold text-gray-800 mb-6 dark:text-white">{{ username }}'s Contribution Graph</h1>
+        <div class="stat-item flex justify-between mb-6 ">
+          <div class="stat-title text-gray-600 dark:text-white">Total Stars</div>
+          <div class="stat-value text-lg font-semibold text-gray-800 dark:text-white">{{ totalStars }}</div>
         </div>
-        <div class="stat-item flex justify-between">
-          <div class="stat-title text-gray-600">Total Forks</div>
-          <div class="stat-value text-lg font-semibold text-gray-800">{{ totalForks }}</div>
+        <div class="stat-item flex justify-between ">
+          <div class="stat-title text-gray-600 dark:text-white">Total Forks</div>
+          <div class="stat-value text-lg font-semibold text-gray-800 dark:text-white">{{ totalForks }}</div>
         </div>
       </div>
-      <div class="contribution-graph-container flex flex-col bg-gray-200 shadow rounded-lg p-6 md:w-2/3">
+      <div class="contribution-graph-container flex flex-col dark:bg-dark-main bg-gray-200  shadow rounded-lg p-6 md:w-2/3">
         <div v-if="days.length === 0" class="text-gray-500 text-center">
           No contributions data available
         </div>
@@ -24,7 +24,7 @@
             v-for="day in days"
             :key="day.date"
             :class="getClass(day.count)"
-            class="contribution-cell w-full h-6 flex items-center justify-center rounded"
+            class=" w-full h-6 flex items-center justify-center rounded"
             :data-date="day.date"
             :data-count="day.count"
           >
