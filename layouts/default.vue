@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav >
     <div>
     
       <div class="flex   justify-between  py-4  md:flex md:w-auto ">
@@ -34,23 +34,22 @@
          
    <button
     @click="toggleDarkMode($colorMode.preference === 'dark' ? 'light' : 'dark')"
-    class="relative px-4 py-1 rounded-xl bg-gray-200 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300 "
+    class="relative px-4 py-1 rounded-xl bg-light-main dark:bg-dark-main focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors duration-300 "
   >
     <span
-      class="  flex items-center justify-center transform transition-transform duration-500 ease-in-out"
+      class="  flex items-center justify-center transform transition-transform duration-500 ease-in-out text-white"
      
     >
       <Icon
         v-if="$colorMode.preference === 'dark'"
         name="solar:sun-bold-duotone"
         size="20px"
-        class="text-white"
       />
       <Icon
         v-else
         name="solar:moon-bold-duotone"
         size="20px"
-        class="text-gray-800"
+
       />
     </span>
   </button>

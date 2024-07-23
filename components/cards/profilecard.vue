@@ -12,7 +12,7 @@
         <p>Hi, My name is</p>
         <div class="font-semibold text-md md:text-lg lg:text-xl">
           <h1>Burak Osman</h1>
-          <p class="text-dark-main dark:text-light-main font-bold">
+          <p class="text-dark-main dark:text-light-main font-mono">
             Fullstack Developer | UI-UX Designer
           </p>
         </div>

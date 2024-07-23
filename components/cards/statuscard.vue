@@ -45,7 +45,7 @@
           class="py-6 lg:px-16 lg:py-12 justify-center text-center flex flex-col rounded-2xl text-dark-main dark:text-light-main font-bold bg-gray-200 dark:bg-dark-main items-center w-full shadow-md"
         >
           <h1 class="text-lg">Visual Studio Code</h1>
-          <h1>{{ activitydetails }}</h1>
+          <h1 class="font-mono">{{ activitydetails }}</h1>
         </div>
 
        

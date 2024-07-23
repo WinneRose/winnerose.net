@@ -1,32 +1,16 @@
 
 <template>
-<div class="flex flex-col space-y-4 pb-12 animate-fade-in">
+   
+<div class="flex flex-col space-y-4 pb-12 animate-fade-in relative">
   
-  <ProfileCard />
+  <Profilecard/>
   <Statuscard />
   <Aboutme id="aboutme"/>
   <Projects id="projects"/>
+  <Github/>
 </div>
 
 </template>
-
-<script>
-import ProfileCard from '~/components/cards/profilecard.vue';
-import Statuscard from '~/components/cards/statuscard.vue';
-import Aboutme from '~/components/aboutme.vue';
-import Projects from '~/components/projects.vue';
-
-export default {
-  components: {
-    ProfileCard,
-    Statuscard,
-    Aboutme,
-    Projects
-  },
-  // Your data, methods, computed properties, etc.
-}
-</script>
-
 <style>
 @keyframes fadeIn {
   from {
