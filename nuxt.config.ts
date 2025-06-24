@@ -84,9 +84,4 @@ export default defineNuxtConfig({
   plugins: ["~/plugins/spotify.js"],
   compatibilityDate: "2024-07-21",
 
-  runtimeConfig: {
-    public: {
-      GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-    },
-  },
 });

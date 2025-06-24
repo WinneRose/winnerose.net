@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col space-y-4 overflow-y-scroll">
+    <Education/>
     <Experience />
+    <Volunteer />
   </div>
 </template>
 

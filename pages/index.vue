@@ -7,7 +7,6 @@
   <Statuscard />
   <Aboutme id="aboutme"/>
   <Projects id="projects"/>
-  <Github/>
 </div>
 
 </template>

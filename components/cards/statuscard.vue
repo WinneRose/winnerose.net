@@ -1,33 +1,25 @@
 <template >
-   <div
-      class="text-dark-main dark:text-gray-200 font-semibold bg-gray-200 dark:bg-dark-main p-3 rounded-lg space-y-3 shadow-md"
-    >
-      <p>
-        I have been working in the software and design sector since I became
-        aware of myself, and my childhood dream was actually to prepare myself
-        for the worlds of tomorrow by researching and I aim to share these
-        research and my work with people and expand my knowledge base
-      </p>
+  <div
+    class="text-dark-main dark:text-gray-200 font-semibold bg-gray-200 dark:bg-dark-main p-3 rounded-lg space-y-3 shadow-md"
+  >
+    <p>
+      I'm a creative and curious product designer & developer who enjoys blending technology, design, and user behavior into meaningful experiences. I thrive on turning ideas into user-centric, scalable, and aesthetic products.
+    </p>
 
-      <p>
-        <span class="dark:text-green-500 text-light-main"
-          >In the software development side,</span
-        >
-        I have mostly worked as a front-end developer, but I also have
-        sufficient knowledge on back-end development and I am preparing myself
-        for newer technologies. I actively continue my research in product hunt
-        and GitHub to find and use these technologies
-      </p>
+    <p>
+      <span class="dark:text-green-500 text-light-main">On the tech side,</span>
+      I work mainly with React, TypeScript, and Unity, crafting smooth interfaces and interactive experiences. I follow modern design principles with a strong focus on usability.
+    </p>
 
-      <p>
-        <span class="dark:text-green-500 text-light-main"
-          >In the design aspect,</span
-        >
-        I try to create modern and eye-catching designs that appeal to people.
-        In this direction, I actively use Dribbble and Behance to get inspired,
-        so that I can add a new perspective to myself.
-      </p>
-    </div>
+    <p>
+      <span class="dark:text-green-500 text-light-main">On the design side,</span>
+      I create visually compelling interfaces, inspired by platforms like Dribbble and Behance. I see design not just as visuals but as a way to build emotional connection with users.
+    </p>
+
+    <p>
+      I'm always exploring—whether it's new tools on GitHub or trends on Product Hunt—fueling my mission to build smarter, more intuitive digital products.
+    </p>
+  </div>
  <Socialmedia />
   <div v-if="discordstatus" class="flex flex-col space-y-4">
     <div class="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
